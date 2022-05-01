@@ -1,0 +1,13 @@
+# This file starts an Axon Server for event store + messaging support for the Axon framework
+# 
+# Start: `docker-compose -f docker/dev/docker-compose.yml up -d`
+#
+---
+version: '3'
+services:
+  axon:
+    image: axoniq/axonserver:latest-dev-nonroot
+    container_name: axon-server
+    ports:
+      - "8024:8024"
+      - "8124:8124"
